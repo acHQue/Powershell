@@ -1,4 +1,6 @@
-﻿#
+
+
+#
 # This is a small Transport For London project.
 # 20190314
 # https://api.tfl.gov.uk/
@@ -19,13 +21,14 @@ for ($i = 0; $i -lt 23; $i++)
  
 $rdname =  $road[$i].displayName
 
-#[array]$state = $road[$i].statusSeverity
+#Note doesn't need to be an [array]
+[array]$state = $road[$i].statusSeverity
 
 #$tolower = $airquality.tolower()
 
 echo "=================================="
 
-Write-Output -InputObject ('Name: {0}' -f $rdname[$i].statusSeverity)
+Write-Output -InputObject ('Name: {0}' -f $state)
 
 Write-Output -InputObject ('Road state is: {0}' -f $road[$i].displayName)
 
