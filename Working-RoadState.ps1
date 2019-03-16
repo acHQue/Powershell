@@ -25,7 +25,7 @@ $rdname =  $road[$i].displayName
 
 echo "=================================="
 
-Write-Output -InputObject ('Name: {0}' -f $rdname)
+Write-Output -InputObject ('Name: {0}' -f $rdname[$i].statusSeverity)
 
 Write-Output -InputObject ('Road state is: {0}' -f $road[$i].displayName)
 
